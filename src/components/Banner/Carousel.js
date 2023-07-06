@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { CryptoState } from "../../cryptoContext";
 import { TrendingCoins } from "../../config/api";
@@ -33,6 +33,7 @@ const Carousel = () => {
   };
   useEffect(() => {
     fetchTrendingCoins();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
   const classes = useStyles();
   //   console.log(trending);
